@@ -11,4 +11,82 @@ Thanks for dropping by! I am a PhD candidate in Econometrics at the [Departement
 
 My research centers on Econometrics and Empirical Microeconometrics, with a focus on distribution-related questions. Moreover, I am interested in natural language processing methods to access and analyze new text data. 
 
+Below you find some insights of my current research:
+
+<style>
+    .slideshow-container {
+        position: relative;
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .slides {
+        display: flex;
+    }
+
+    .slide {
+        width: 100%;
+        display: none;
+    }
+
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 1;
+        color: white; /* Set arrow color to white */
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+</style>
+
+<div class="slideshow-container">
+    <div class="slides">
+        <img src="/images/weights.jpg" alt="Slide 1" class="slide">
+    </div>
+    
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+</div>
+
+
+<script>
+    let slideIndex = 1; // Start from the first slide
+    showSlide(slideIndex);
+
+    function changeSlide(n) {
+        showSlide(slideIndex += n);
+    }
+
+    function showSlide(n) {
+        let slides = document.querySelectorAll('.slide');
+        
+        if (n > slides.length) {
+            slideIndex = 1; // Go back to the first slide
+        }
+        
+        if (n < 1) {
+            slideIndex = slides.length; // Go to the last slide
+        }
+        
+        // Hide all slides
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none';
+        }
+        
+        // Display the current slide
+        slides[slideIndex - 1].style.display = 'block';
+    }
+</script>
+
+
+
 
